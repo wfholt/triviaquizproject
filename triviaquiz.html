@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trivia Quiz</title>
+</head>
+
+	<body>
+	
+	
+	<script language="javascript">
+	
+	var myArray = new Array();
+	
+//------------------------------------
+	//Question 1 Data
+	myArray[0] = new Array();    //create 1st dimension (row)
+	myArray[0][0] = "1";         //Question id
+	myArray[0][1] = "c";         //correct answer
+	myArray[0][2] = "multipleChoice";     //Question type //2nd dimension (column 1)
+	myArray[0][3] = "Which of these is not a blood type?";       //Question//2nd dimension (column 2)
+	myArray[0][4] = "A positive";    //2nd dimension (column 3)
+	myArray[0][5] = "O negative";    //2nd dimension (column 3)
+	myArray[0][6] = "LOL";          //2nd dimension (column 3)
+	
+//------------------------------------
+		//Question 1 Render
+		
+		
+		document.write("<p>" + myArray[0][3] + "</p>");
+		document.write("<input type='radio' id='a1' name='question1' value=myArray[0][4] >" + myArray[0][4] + "<br />");
+		document.write("<input type='radio' id='b1' name='question1' value=myArray[0][5] >" + myArray[0][5] + "<br />"); 
+        document.write("<input type='radio' id='c1' name='question1' value=myArray[0][6] >" + myArray[0][6] + "<br />");
+		
+		//==================================
+		
+		function testAnswers(a)
+		{
+		
+			if(document.getElementById("c1").checked == true)
+			{
+			alert("correct answer "  + a );
+			}
+			
+			else
+			{
+			alert("wrong answer " + a );
+			}
+		
+		}
+		
+		//----------------------------------
+	var a = "kid";
+	</script>
+	
+	
+	<input type="button" onClick="testAnswers(a)" value="submit"/>
+	
+	
+	</script>
+	
+	</body>
+	
+</html>
