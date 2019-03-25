@@ -7,6 +7,7 @@
   <title>Trivia Quiz</title>
 </head>
 
+
 	<body>
 	
 	
@@ -38,16 +39,27 @@
 		
 		function testAnswers(a)
 		{
-		
+	
 			if(document.getElementById("c1").checked == true)
 			{
 			alert("correct answer "  + a );
 			}
 			
-			else
+			else if(document.getElementById("a1").checked == true)
 			{
-			alert("wrong answer " + a );
+			alert("wrong answer "  + a );
 			}
+			
+			else if(document.getElementById("b1").checked == true)
+			{
+			alert("wrong answer "  + a );
+			}
+			
+			else if(document.getElementById("a1" && "b1" && "c1").checked == false)
+			{
+			alert("please choose an answer "  + a );
+			}
+			
 		
 		}
 		
